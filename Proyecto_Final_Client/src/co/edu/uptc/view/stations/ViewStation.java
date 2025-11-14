@@ -72,4 +72,8 @@ public class ViewStation extends JPanel {
     public OrdersPanel getOrdersPanel() {
         return ordersPanel;
     }
+
+    public JPanel getDownPanel() {
+        return downPanel;
+    }
 }

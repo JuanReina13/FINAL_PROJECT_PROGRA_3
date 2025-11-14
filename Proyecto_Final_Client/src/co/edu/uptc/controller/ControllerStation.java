@@ -7,9 +7,7 @@ import java.io.IOException;
 import com.google.gson.Gson;
 
 import co.edu.uptc.model.Order;
-import co.edu.uptc.model.Product;
 import co.edu.uptc.view.components.OrderViewData;
-import co.edu.uptc.view.stations.OrderCardPanel;
 import co.edu.uptc.view.stations.OrdersPanel;
 import co.edu.uptc.view.stations.ViewStation;
 
@@ -50,6 +48,7 @@ public class ControllerStation {
 
             output.writeUTF("REGISTER_STATION");
             output.writeUTF(stationName);
+            output.flush();
 
             running = true;
             new Thread(() -> {
@@ -62,23 +61,25 @@ public class ControllerStation {
                                 Order order = gson.fromJson(orderJson, Order.class);
                                 orderList.add(order);
                                 SwingUtilities.invokeLater(() -> {
-                                    if (viewStation != null) {
-                                        List<String> productStrings = new ArrayList<>();
-                                        for (Product p : order.getProducts()) {
-                                            productStrings.add(p.getQuantity() + "x " + p.getName());
-                                        }
-                                        OrderCardPanel card = new OrderCardPanel(order.getIdOrder(), order.getTable(),
-                                                order.getTime(), productStrings, true, this);
-                                        viewStation.getOrdersPanel().addOrderCard(card);
+                                    if (viewStation != null && viewStation.getOrdersPanel() != null) {
+                                        viewStation.getOrdersPanel().refreshOrders();
                                     }
                                 });
                                 break;
 
                             case "ORDER_FINISHED":
                                 String finishedOrderJson = input.readUTF();
+                                System.out.println("FINISHED JSON: " + finishedOrderJson);
                                 Order finishedOrder = gson.fromJson(finishedOrderJson, Order.class);
-                                orderList.removeIf(o -> o.getIdOrder().equals(finishedOrder.getIdOrder()));
 
+                                System.out.println("ANTES DE BORRAR: " + orderList.size());
+                                orderList.removeIf(o -> o.getIdOrder().equals(finishedOrder.getIdOrder()));
+                                System.out.println("DESPUÉS DE BORRAR: " + orderList.size());
+                                System.out.println("ORDER LIST CLIENTE:");
+                                orderList.forEach(o -> System.out.println(" - " + o.getIdOrder()));
+                                SwingUtilities.invokeLater(() -> { 
+                                    viewStation.getOrdersPanel().refreshOrders();
+                                });
                                 break;
 
                             case "ORDERS":
@@ -86,8 +87,6 @@ public class ControllerStation {
                                 Order[] activeOrders = gson.fromJson(ordersJSon, Order[].class);
                                 orderList.clear();
                                 orderList.addAll(Arrays.asList(activeOrders));
-                                System.out.println("Ordenes recibidas: " + orderList.size() + " órdenes");
-
                                 SwingUtilities.invokeLater(() -> {
                                     if (viewStation != null) {
                                         OrdersPanel panel = viewStation.getOrdersPanel();
@@ -146,7 +145,6 @@ public class ControllerStation {
         for (Order order : orderList) {
             if (order.getIdOrder().equals(orderId)) {
                 sendFinishOrder(order);
-                orderList.remove(order);
                 break;
             }
         }

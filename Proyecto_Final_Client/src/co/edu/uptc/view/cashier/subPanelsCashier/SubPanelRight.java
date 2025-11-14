@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
@@ -75,6 +76,7 @@ public class SubPanelRight extends JPanel {
         actionButtonsPanel.addSendListener(e -> {
             ControllerCashier controller = new ControllerCashier();
             Order order = new Order();
+            order.setIdOrder(UUID.randomUUID().toString());
             order.setTime(System.currentTimeMillis() + "");
             order.setTable(commentField.getText());
             List<Product> productList = new ArrayList<>();
@@ -87,8 +89,7 @@ public class SubPanelRight extends JPanel {
                             panel.getProductName() + "|" + panel.getTextPane().getText(),
                             panel.getCategory(),
                             panel.getUnitPrice(),
-                            panel.getQuantity()
-                            /*panel.getTextPane().getText()*/);
+                            panel.getQuantity());
                     productList.add(product);
                     categorySet.add(panel.getCategory());
                 }

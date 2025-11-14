@@ -23,7 +23,7 @@ public class OrderCardPanel extends RoundedPanelUI {
     private boolean isActive;
     private String orderId;
 
-    public OrderCardPanel(String ordenId, String table, String time, List<String> products, boolean isActive, ControllerStation controllerStation) {
+    public OrderCardPanel(String orderId, String table, String time, List<String> products, boolean isActive, ControllerStation controllerStation) {
         super(UIStyle.BACKGROUND, 20);
         this.isActive = isActive;
         this.orderId = orderId;
@@ -92,8 +92,8 @@ public class OrderCardPanel extends RoundedPanelUI {
         JButton btnCancel = addButton("resources/buttons_Images/Cancel.png", 55, 55);
     
         btnConfirm.addActionListener(e -> {
+            System.out.println("Boton Finalizar Clikeado");
             controllerStation.sendFinishOrderById(orderId);
-            restoreHeader(headerPanel, table, time, color);
         });
 
         btnCancel.addActionListener(e -> restoreHeader(headerPanel, table, time, color));

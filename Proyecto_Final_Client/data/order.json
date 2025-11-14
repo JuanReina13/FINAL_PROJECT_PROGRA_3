@@ -1,14 +1,15 @@
 {
-  "table": "Soraca",
+  "idOrder": "fe20c071-6d45-4552-b2c9-f497abfdc388",
+  "table": "Yo",
   "products": [
     {
-      "name": "Grilled Cheese Deluxe|Extra Bacon",
+      "name": "Grilled Cheese Deluxe|",
       "category": "SANDWICH",
       "price": 8.99,
       "quantity": 1
     }
   ],
-  "time": "1763137240885",
+  "time": "1763146437855",
   "isReady": false,
   "categoriesInvolved": [
     "SANDWICH"
