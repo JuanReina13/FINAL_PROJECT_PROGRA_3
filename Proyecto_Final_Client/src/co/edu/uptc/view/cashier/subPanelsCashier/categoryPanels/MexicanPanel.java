@@ -1,6 +1,5 @@
 package co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels;
 
-import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -24,6 +23,7 @@ public class MexicanPanel extends JPanel{
     private RoundedButtonProduct btnCheeseQuesadilla;
     private RoundedButtonProduct btnBltQuesadilla;
     private RoundedButtonProduct btnBuildYourOwn;
+
 
     public MexicanPanel(SubPanelCenter subPanelCenter, SubPanelRight subPanelRight) {
         setLayout(new GridBagLayout());

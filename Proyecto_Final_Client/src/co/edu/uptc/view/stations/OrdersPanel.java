@@ -97,7 +97,7 @@ public class OrdersPanel extends JPanel {
     }
 
     public void refreshOrders() {
-        this.orderCards = convertToOrderCards(); 
-        showOrders(); 
+        this.orderCards = convertToOrderCards();
+        showOrders();
     }
 }

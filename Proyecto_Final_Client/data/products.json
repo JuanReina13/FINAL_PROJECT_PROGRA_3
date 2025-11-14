@@ -82,7 +82,7 @@
   {
     "id": "bg-hayloft-classic",
     "name": "Hayloft Classic Burger",
-    "category": "BURGERS",
+    "category": "BURGER",
     "price": "9.99",
     "note": "",
     "quantity": 1
@@ -90,7 +90,7 @@
   {
     "id": "bg-hayloft-cheese",
     "name": "Hayloft Burger with Cheese",
-    "category": "BURGERS",
+    "category": "BURGER",
     "price": "10.99",
     "note": "",
     "quantity": 1
@@ -98,7 +98,7 @@
   {
     "id": "bg-blt",
     "name": "BLT Burger",
-    "category": "BURGERS",
+    "category": "BURGER",
     "price": "11.99",
     "note": "",
     "quantity": 1
@@ -106,7 +106,7 @@
   {
     "id": "bg-ranch",
     "name": "Ranch Burger",
-    "category": "BURGERS",
+    "category": "BURGER",
     "price": "12.99",
     "note": "",
     "quantity": 1
@@ -114,7 +114,7 @@
   {
     "id": "bg-swiss-mushrooms",
     "name": "Swiss & Mushrooms Burger",
-    "category": "BURGERS",
+    "category": "BURGER",
     "price": "12.99",
     "note": "",
     "quantity": 1
@@ -122,7 +122,7 @@
   {
     "id": "bg-spicy-pepperjack",
     "name": "Spicy Pepper Jack Burger",
-    "category": "BURGERS",
+    "category": "BURGER",
     "price": "12.99",
     "note": "",
     "quantity": 1
@@ -130,7 +130,7 @@
   {
     "id": "bg-double",
     "name": "Double Burger",
-    "category": "BURGERS",
+    "category": "BURGER",
     "price": "14.99",
     "note": "",
     "quantity": 1
@@ -138,7 +138,7 @@
   {
     "id": "hd-bacon-cheese",
     "name": "Bacon Cheese Dog",
-    "category": "HOT_DOGS",
+    "category": "HOT_DOG",
     "price": "8.99",
     "note": "",
     "quantity": 1
@@ -146,7 +146,7 @@
   {
     "id": "hd-chicago",
     "name": "Chicago Dog",
-    "category": "HOT_DOGS",
+    "category": "HOT_DOG",
     "price": "8.99",
     "note": "",
     "quantity": 1
@@ -154,7 +154,7 @@
   {
     "id": "hd-detroit",
     "name": "Detroit Dog",
-    "category": "HOT_DOGS",
+    "category": "HOT_DOG",
     "price": "8.99",
     "note": "",
     "quantity": 1
@@ -162,7 +162,7 @@
   {
     "id": "hd-classic",
     "name": "Classic Dog",
-    "category": "HOT_DOGS",
+    "category": "HOT_DOG",
     "price": "5.99",
     "note": "",
     "quantity": 1
@@ -218,7 +218,7 @@
   {
     "id": "sd-caesar",
     "name": "Caesar Salad (No chicken)",
-    "category": "SALADS",
+    "category": "SALAD",
     "price": "8.50",
     "note": "",
     "quantity": 1
@@ -226,7 +226,7 @@
   {
     "id": "sd-chef",
     "name": "Chef Salad",
-    "category": "SALADS",
+    "category": "SALAD",
     "price": "11.99",
     "note": "",
     "quantity": 1
@@ -234,7 +234,7 @@
   {
     "id": "sd-cobb",
     "name": "Cobb Salad",
-    "category": "SALADS",
+    "category": "SALAD",
     "price": "11.99",
     "note": "",
     "quantity": 1
@@ -242,7 +242,7 @@
   {
     "id": "sd-mediterranean",
     "name": "Mediterranean Salad",
-    "category": "SALADS",
+    "category": "SALAD",
     "price": "11.99",
     "note": "",
     "quantity": 1
@@ -250,7 +250,7 @@
   {
     "id": "sw-blt",
     "name": "BLT Sandwich",
-    "category": "SANDWICHES",
+    "category": "SANDWICH",
     "price": "8.99",
     "note": "",
     "quantity": 1
@@ -258,7 +258,7 @@
   {
     "id": "sw-grilled-cheese",
     "name": "Grilled Cheese Sandwich",
-    "category": "SANDWICHES",
+    "category": "SANDWICH",
     "price": "7.99",
     "note": "",
     "quantity": 1
@@ -266,7 +266,7 @@
   {
     "id": "sw-grilled-cheese-deluxe",
     "name": "Grilled Cheese Deluxe",
-    "category": "SANDWICHES",
+    "category": "SANDWICH",
     "price": "8.99",
     "note": "",
     "quantity": 1
@@ -274,7 +274,7 @@
   {
     "id": "sw-grilled-chicken",
     "name": "Grilled Chicken Sandwich",
-    "category": "SANDWICHES",
+    "category": "SANDWICH",
     "price": "10.99",
     "note": "",
     "quantity": 1
@@ -282,7 +282,7 @@
   {
     "id": "sw-haystack",
     "name": "Haystack Sandwich",
-    "category": "SANDWICHES",
+    "category": "SANDWICH",
     "price": "10.99",
     "note": "",
     "quantity": 1
@@ -290,7 +290,7 @@
   {
     "id": "Bv-colombiana",
     "name": "Colombiana",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "3.50",
     "note": "",
     "quantity": 1
@@ -298,7 +298,7 @@
   {
     "id": "Bv-manzana-postobon",
     "name": "Manzana Postobón",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "3.50",
     "note": "",
     "quantity": 1
@@ -306,7 +306,7 @@
   {
     "id": "Bv-coca-cola",
     "name": "Coca-Cola",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "3.80",
     "note": "",
     "quantity": 1
@@ -314,7 +314,7 @@
   {
     "id": "Bv-7up",
     "name": "7UP",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "3.70",
     "note": "",
     "quantity": 1
@@ -322,7 +322,7 @@
   {
     "id": "Bv-hit-lulo",
     "name": "Jugo Hit Lulo",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "4.00",
     "note": "",
     "quantity": 1
@@ -330,7 +330,7 @@
   {
     "id": "Bv-hit-mango",
     "name": "Jugo Hit Mango",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "4.00",
     "note": "",
     "quantity": 1
@@ -338,7 +338,7 @@
   {
     "id": "Bv-hindu-te-limon",
     "name": "Té Hindú Limón",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "4.20",
     "note": "",
     "quantity": 1
@@ -346,7 +346,7 @@
   {
     "id": "Bv-hindu-te-durazno",
     "name": "Té Hindú Durazno",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "4.20",
     "note": "",
     "quantity": 1
@@ -354,7 +354,7 @@
   {
     "id": "Bv-limon-mr-tea",
     "name": "Mr Tea Limón",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "6.00",
     "note": "",
     "quantity": 1
@@ -362,7 +362,7 @@
   {
     "id": "Bv-dorada-colombia-club",
     "name": "Club Colombia Dorada",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "5.80",
     "note": "",
     "quantity": 1
@@ -370,7 +370,7 @@
   {
     "id": "Bv-heineken",
     "name": "Heineken",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "6.80",
     "note": "",
     "quantity": 1
@@ -378,7 +378,7 @@
   {
     "id": "Bv-stella-artois",
     "name": "Stella Artois",
-    "category": "BEVERAGES",
+    "category": "BEVERAGE",
     "price": "7.80",
     "note": "",
     "quantity": 1

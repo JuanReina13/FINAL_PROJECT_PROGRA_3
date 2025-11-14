@@ -1,8 +1,7 @@
 package co.edu.uptc.view.cashier.subPanelsCashier;
 
 import java.awt.CardLayout;
-import java.awt.Dimension;
-
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.BeveragesPanel;
@@ -15,6 +14,7 @@ import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.SandwichesPanel;
 import co.edu.uptc.view.styleConstans.UIStyle;
 
 public class SubPanelCenter extends JPanel{
+
     private ButtonCategoryPanel buttonCategoryPanel;
     private PizzasPanel pizzasPanel;
     private BurguersPanel burguersPanel;
@@ -24,6 +24,7 @@ public class SubPanelCenter extends JPanel{
     private MexicanPanel mexicanPanel;
     private BeveragesPanel  beveragesPanel;
     private CardLayout cardLayout;
+
 
     public SubPanelCenter(SubPanelRight subPanelRight) {
         buttonCategoryPanel = new ButtonCategoryPanel(this);
@@ -36,6 +37,7 @@ public class SubPanelCenter extends JPanel{
         beveragesPanel = new BeveragesPanel(this, subPanelRight);
         cardLayout = new CardLayout();
         setBackground(UIStyle.BORDER_COLOR);
+        setBorder(BorderFactory.createMatteBorder(3, 3, 0, 0, UIStyle.TEXT_DARK));
         setLayout(cardLayout);
         initComponents();
     }
@@ -56,5 +58,4 @@ public class SubPanelCenter extends JPanel{
         revalidate();
         repaint();
     }
-
 }

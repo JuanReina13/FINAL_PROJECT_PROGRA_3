@@ -15,11 +15,17 @@ import co.edu.uptc.view.cashier.subPanelsCashier.SubPanelCenter;
 import co.edu.uptc.view.styleConstans.UIStyle;
 
 public class RoundedButtonCardLayout extends JButton{
+
     private Color backgroundColor;
+
 
     public RoundedButtonCardLayout(String text, Color backgroundColor, String cardLayoutName, SubPanelCenter subPanelCenter) {
         super(text);
         this.backgroundColor = backgroundColor;
+        initComponents(cardLayoutName, subPanelCenter);
+    }
+
+    private void initComponents(String cardLayoutName, SubPanelCenter subPanelCenter){
         setFocusPainted(false);
         setContentAreaFilled(false);
         setBorderPainted(false);

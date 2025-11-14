@@ -9,6 +9,7 @@ public class MainFrame extends JFrame {
 
     private static MainFrame instance;
 
+
     public MainFrame() {
         setTitle("Hayloft Order Management");
         setSize(800, 600);

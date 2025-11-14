@@ -22,6 +22,7 @@ public class HotDogsPanel extends JPanel{
     private RoundedButtonProduct btnDetroit;
     private RoundedButtonProduct btnClassic;
 
+
     public HotDogsPanel(SubPanelCenter subPanelCenter, SubPanelRight subPanelRight) {
         setLayout(new GridBagLayout());
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -53,5 +54,4 @@ public class HotDogsPanel extends JPanel{
         gbc.gridy = 3; add(btnChicago, gbc);
         gbc.gridy = 4; add(btnBaconCheese, gbc);
     }
-
 }

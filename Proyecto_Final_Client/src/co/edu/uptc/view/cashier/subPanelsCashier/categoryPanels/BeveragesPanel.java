@@ -20,6 +20,7 @@ public class BeveragesPanel extends JPanel{
             btnHitLulo, btnHitMango, btnHinduLimon, btnHinduDurazno,
             btnMrTeaLimon, btnClubColombia, btnHeineken, btnStellaArtois;
 
+
     public BeveragesPanel(SubPanelCenter subPanelCenter, SubPanelRight subPanelRight) {
         setLayout(new GridBagLayout());
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));

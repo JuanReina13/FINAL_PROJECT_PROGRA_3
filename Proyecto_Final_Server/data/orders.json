@@ -17,7 +17,6 @@
       },
       {
         "name": "Hayloft Burguer with cheese",
-        "category": "HAMBURGER",
         "price": 11.49,
         "quantity": 2
       }
@@ -27,7 +26,7 @@
     "categoriesInvolved": [
       "PIZZA",
       "SALAD",
-      "HAMBURGER"
+      null
     ]
   },
   {
@@ -42,7 +41,6 @@
       },
       {
         "name": "Hayloft Burguer with cheese",
-        "category": "HAMBURGER",
         "price": 11.49,
         "quantity": 2
       }
@@ -51,7 +49,109 @@
     "time": "1762799825231",
     "categoriesInvolved": [
       "SALAD",
-      "HAMBURGER"
+      null
+    ]
+  },
+  {
+    "table": "",
+    "products": [
+      {
+        "name": "Chicken Bacon Ranch Pizza",
+        "category": "PIZZA",
+        "price": 21.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "01:18:28.770370700",
+    "categoriesInvolved": [
+      "PIZZA"
+    ]
+  },
+  {
+    "table": "paw paw",
+    "products": [
+      {
+        "name": "BBQ Chicken GoudaPizza",
+        "category": "PIZZA",
+        "price": 21.99,
+        "quantity": 1
+      },
+      {
+        "name": "Pepperoni Pizza",
+        "category": "PIZZA",
+        "price": 19.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "01:48:38.737653100",
+    "categoriesInvolved": [
+      "PIZZA"
+    ]
+  },
+  {
+    "table": "niles",
+    "products": [
+      {
+        "name": "Nachos Supreme",
+        "price": 11.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "01:51:55.933127600",
+    "categoriesInvolved": [
+      null
+    ]
+  },
+  {
+    "table": "Decatur",
+    "products": [
+      {
+        "name": "Pepperoni Pizza",
+        "category": "PIZZA",
+        "price": 19.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burger with Cheese",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Chicago Dog",
+        "category": "HOT_DOG",
+        "price": 8.99,
+        "quantity": 1
+      },
+      {
+        "name": "Grilled Cheese Deluxe",
+        "category": "SANDWICH",
+        "price": 8.99,
+        "quantity": 1
+      },
+      {
+        "name": "7UP",
+        "category": "BEVERAGE",
+        "price": 3.7,
+        "quantity": 2
+      },
+      {
+        "name": "Jugo Hit Mango",
+        "category": "BEVERAGE",
+        "price": 4.0,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "01:59:23.825777300",
+    "categoriesInvolved": [
+      "PIZZA",
+      null,
+      "HOT_DOG",
+      "BEVERAGE",
+      "SANDWICH"
     ]
   }
 ]

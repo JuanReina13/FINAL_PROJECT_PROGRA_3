@@ -21,19 +21,21 @@ public class RoundedButtonProduct extends JButton{
 
     private Color backgroundColor;
     private Product product;
-    private ShoppingCart shoppingCart;
+
+
     public RoundedButtonProduct(String productName, Color backgroundColor, ShoppingCart shoppingCart) {
         this.backgroundColor = backgroundColor;
-        this.shoppingCart = shoppingCart;
         this.product = findProduct(productName);
-
         if (product != null) {
             setText(product.getName() + " - USD " + product.getPrice());
         } else {
             setText(productName + " (No encontrado)");
             System.err.println("[Advertencia] Producto no encontrado: " + productName);
         }
+        initComponents(shoppingCart);
+    }
 
+    private void initComponents(ShoppingCart shoppingCart){
         setFocusPainted(false);
         setContentAreaFilled(false);
         setBorderPainted(false);
@@ -45,12 +47,11 @@ public class RoundedButtonProduct extends JButton{
             public void mouseClicked(MouseEvent e) {
                 if (product != null) {
                     System.out.println("Seleccionado: " + product.getName());
-                    shoppingCart.addProduct(1, product.getName(), product.getPrice());
+                    shoppingCart.addProduct(1, product.getName(), product.getPrice(),product.getCategory());
                 }
             }
         });
     }
-
 
     private Product findProduct(String id) {
         ProductRepository repo = new ProductRepository();

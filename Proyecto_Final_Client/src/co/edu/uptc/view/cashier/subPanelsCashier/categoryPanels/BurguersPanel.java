@@ -16,6 +16,7 @@ import co.edu.uptc.view.components.RoundedButtonCardLayout;
 import co.edu.uptc.view.styleConstans.UIStyle;
 
 public class BurguersPanel extends JPanel {
+
     private RoundedButtonCardLayout btnBack;
     private RoundedButtonProduct btnHayloftBurger;
     private RoundedButtonProduct btnHayloftBurgerWithCheese;
@@ -24,6 +25,7 @@ public class BurguersPanel extends JPanel {
     private RoundedButtonProduct btnSwissMushroomsBurger;
     private RoundedButtonProduct btnSpicyPepperJackBurger;
     private RoundedButtonProduct btnDoubleBurguer;
+
 
     public BurguersPanel(SubPanelCenter subPanelCenter, SubPanelRight subPanelRight) {
         setLayout(new GridBagLayout());

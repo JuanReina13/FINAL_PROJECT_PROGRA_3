@@ -1,0 +1,56 @@
+{
+  "table": "Decatur",
+  "products": [
+    {
+      "name": "Pepperoni Pizza",
+      "category": "PIZZA",
+      "price": 19.99,
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "name": "Hayloft Burger with Cheese",
+      "category": "BURGER",
+      "price": 10.99,
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "name": "Chicago Dog",
+      "category": "HOT_DOG",
+      "price": 8.99,
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "name": "Grilled Cheese Deluxe",
+      "category": "SANDWICH",
+      "price": 8.99,
+      "quantity": 1,
+      "note": ""
+    },
+    {
+      "name": "7UP",
+      "category": "BEVERAGE",
+      "price": 3.7,
+      "quantity": 2,
+      "note": ""
+    },
+    {
+      "name": "Jugo Hit Mango",
+      "category": "BEVERAGE",
+      "price": 4.0,
+      "quantity": 1,
+      "note": ""
+    }
+  ],
+  "time": "01:59:23.825777300",
+  "isReady": false,
+  "categoriesInvolved": [
+    "PIZZA",
+    "BURGER",
+    "HOT_DOG",
+    "BEVERAGE",
+    "SANDWICH"
+  ]
+}

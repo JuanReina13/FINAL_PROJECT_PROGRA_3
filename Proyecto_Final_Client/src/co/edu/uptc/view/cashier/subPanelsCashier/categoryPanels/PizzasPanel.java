@@ -28,6 +28,7 @@ public class PizzasPanel extends JPanel {
     private RoundedButtonProduct btnHaysticks;
     private RoundedButtonProduct btnHaysticksWithCheese;
 
+
     public PizzasPanel(SubPanelCenter subPanelCenter, SubPanelRight subPanelRight) {
         setLayout(new GridBagLayout());
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));

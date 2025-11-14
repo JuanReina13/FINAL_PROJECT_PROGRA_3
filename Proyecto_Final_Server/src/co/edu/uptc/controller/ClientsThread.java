@@ -87,7 +87,7 @@ public class ClientsThread extends Thread {
             socket.close();
             dataOutput.close();
             dataInput.close();
-            System.out.println("Cliente desconectado: " + socket.getInetAddress());
+            System.out.println("Cliente desconectado correctamente: " + socket.getInetAddress());
 
         } catch (Exception e) {
             System.out.println("Error en hilo cliente: " + e.getMessage());

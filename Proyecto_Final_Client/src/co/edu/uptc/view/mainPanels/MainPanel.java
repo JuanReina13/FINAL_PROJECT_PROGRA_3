@@ -114,7 +114,7 @@ public class MainPanel extends JPanel {
         button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                button.setBackground(new Color(225, 235, 255)); // tono más azul
+                button.setBackground(new Color(225, 235, 255));
                 button.setBorder(BorderFactory.createLineBorder(new Color(100, 150, 255), 2, true));
                 button.setOpaque(true);
             }

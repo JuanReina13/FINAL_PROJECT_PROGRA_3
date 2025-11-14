@@ -19,18 +19,21 @@ public class RoundedButton extends JButton{
     private Color backgroundColor;
     private String text;
 
+
     public RoundedButton(String text, Color backgroundColor) {
         super(text);
         this.text = text;
         this.backgroundColor = backgroundColor;
+        initComponents();
+    }
 
+    private void initComponents(){
         setFocusPainted(false);
         setContentAreaFilled(false);
         setBorderPainted(false);
         setForeground(UIStyle.TEXT_DARK);
         setFont(UIStyle.SUBTITLE_FONT2);
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
@@ -72,5 +75,4 @@ public class RoundedButton extends JButton{
     public String getButtonText() {
         return text;
     }
-
 }

@@ -13,7 +13,7 @@ public class Order {
     private List<String> categoriesInvolved;
 
     public Order(String table, List<Product> products, String time) {
-        this.idOrder = UUID.randomUUID().toString();;
+        this.idOrder = UUID.randomUUID().toString();
         this.table = table;
         this.products = products;
         this.time = time;

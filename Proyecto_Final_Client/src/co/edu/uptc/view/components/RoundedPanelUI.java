@@ -15,6 +15,7 @@ public class RoundedPanelUI extends JPanel {
     private int arcHeight;
     private Color backgroundColor;
 
+
     public RoundedPanelUI(Color backgroundColor, int arcSize) {
         this.backgroundColor = backgroundColor;
         this.arcWidth = arcSize;

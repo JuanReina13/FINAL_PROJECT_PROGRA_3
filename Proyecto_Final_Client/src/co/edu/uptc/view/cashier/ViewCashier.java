@@ -12,6 +12,7 @@ public class ViewCashier extends JPanel{
 
     private ControllerCashier controllerCashier;
 
+
     public ViewCashier(ControllerCashier controllerCashier) {
         this.controllerCashier = controllerCashier;
         setSize(800, 600);

@@ -1,13 +1,11 @@
 package co.edu.uptc.view.cashier.subPanelsCashier.OrderPanels;
 
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionListener;
 
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,7 +22,7 @@ public class ActionButtonsPanel extends JPanel{
 
     public ActionButtonsPanel() {
         setBackground(UIStyle.BACKGROUND_COLOR);
-        setPreferredSize(new Dimension(WIDTH,200));
+        setPreferredSize(new Dimension(WIDTH,180));
         setLayout(new GridBagLayout());
         initComponents();
     }
@@ -51,12 +49,17 @@ public class ActionButtonsPanel extends JPanel{
         gbc.gridx = 1;
         gbc.gridy = 1;
         add(btnRight, gbc);
-
     }
 
     public void setTotal(double total) {
         labelTotal.setText(String.format("Total: $ %.2f", total));
     }
 
+    public void addSendListener(ActionListener listener) {
+        btnRight.addActionListener(listener);
+    }
 
+    public void addDeleteListener(ActionListener listener) {
+        btnLeft.addActionListener(listener);
+    }
 }

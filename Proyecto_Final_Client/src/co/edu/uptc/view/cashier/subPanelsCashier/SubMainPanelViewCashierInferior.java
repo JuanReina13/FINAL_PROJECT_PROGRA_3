@@ -3,6 +3,7 @@ package co.edu.uptc.view.cashier.subPanelsCashier;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -15,6 +16,7 @@ public class SubMainPanelViewCashierInferior extends JPanel{
         setPreferredSize(new Dimension(800, 30));
         setLayout(new BorderLayout());
         setBackground(UIStyle.BACKGROUND_INFERIOR_COLOR);
+        setBorder(BorderFactory.createMatteBorder(3, 0, 0, 0, UIStyle.TEXT_DARK));
         initComponents();
         setVisible(true);
     }
@@ -25,5 +27,4 @@ public class SubMainPanelViewCashierInferior extends JPanel{
         brandLabel.setForeground(UIStyle.TEXT_PRIMARY);
         add(brandLabel, BorderLayout.CENTER);
     }
-
 }

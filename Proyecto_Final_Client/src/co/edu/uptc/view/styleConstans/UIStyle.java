@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class UIStyle {
+
     public static final Color PRIMARY_COLOR = new Color(25, 118, 210);
     public static final Color SECONDARY_COLOR = new Color(13, 71, 161);
     public static final Color BACKGROUND_COLOR = new Color(245, 245, 245);
@@ -48,6 +49,7 @@ public class UIStyle {
     public static final Color TEXT_PRIMARY = new Color(33, 33, 33); // #212121
     public static final Color TEXT_SECONDARY = new Color(97, 97, 97); // #616161
     public static final Color BORDER_COLOR = new Color(189, 189, 189); // #BDBDBD
+    public static final Color BORDER_COLOR2 = new Color(205, 205,205); // #cdcdcdff
     public static final Color BACKGROUND_INFERIOR_COLOR = new Color(239, 222, 205); // #EFDECD
     public static final Color TOPBAR_BG = new Color(55, 71, 79); // #37474F
     public static final Color TOPBAR_TEXT = new Color(255, 255, 255); // #FFFFFF
