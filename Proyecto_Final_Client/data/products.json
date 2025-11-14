@@ -1,0 +1,386 @@
+[
+  {
+    "id": "pz-pepperoni",
+    "name": "Pepperoni Pizza",
+    "category": "PIZZA",
+    "price": "19.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-supreme",
+    "name": "Supreme Pizzza",
+    "category": "PIZZA",
+    "price": "21.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-hawaiian",
+    "name": "Hawaiian Pizza",
+    "category": "PIZZA",
+    "price": "20.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-ranch",
+    "name": "Chicken Bacon Ranch Pizza",
+    "category": "PIZZA",
+    "price": "21.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-bbq",
+    "name": "BBQ Chicken GoudaPizza",
+    "category": "PIZZA",
+    "price": "21.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-meatlovers",
+    "name": "Meatlovers Pizza",
+    "category": "PIZZA",
+    "price": "21.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-blt",
+    "name": "BLT style Pizza",
+    "category": "PIZZA",
+    "price": "21.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-jalapeno",
+    "name": "Jalapeno Popper Pizza",
+    "category": "PIZZA",
+    "price": "22.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-haysticks",
+    "name": "Haysticks",
+    "category": "PIZZA",
+    "price": "10.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "pz-haysticks-cheese",
+    "name": "Haysticks with Cheese",
+    "category": "PIZZA",
+    "price": "11.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "bg-hayloft-classic",
+    "name": "Hayloft Classic Burger",
+    "category": "BURGERS",
+    "price": "9.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "bg-hayloft-cheese",
+    "name": "Hayloft Burger with Cheese",
+    "category": "BURGERS",
+    "price": "10.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "bg-blt",
+    "name": "BLT Burger",
+    "category": "BURGERS",
+    "price": "11.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "bg-ranch",
+    "name": "Ranch Burger",
+    "category": "BURGERS",
+    "price": "12.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "bg-swiss-mushrooms",
+    "name": "Swiss & Mushrooms Burger",
+    "category": "BURGERS",
+    "price": "12.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "bg-spicy-pepperjack",
+    "name": "Spicy Pepper Jack Burger",
+    "category": "BURGERS",
+    "price": "12.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "bg-double",
+    "name": "Double Burger",
+    "category": "BURGERS",
+    "price": "14.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "hd-bacon-cheese",
+    "name": "Bacon Cheese Dog",
+    "category": "HOT_DOGS",
+    "price": "8.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "hd-chicago",
+    "name": "Chicago Dog",
+    "category": "HOT_DOGS",
+    "price": "8.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "hd-detroit",
+    "name": "Detroit Dog",
+    "category": "HOT_DOGS",
+    "price": "8.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "hd-classic",
+    "name": "Classic Dog",
+    "category": "HOT_DOGS",
+    "price": "5.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "mx-nachos-supreme",
+    "name": "Nachos Supreme",
+    "category": "MEXICAN",
+    "price": "11.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "mx-nachos-cheese",
+    "name": "Nachos with Cheese",
+    "category": "MEXICAN",
+    "price": "5.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "mx-hot-pretzel",
+    "name": "Hot Pretzel",
+    "category": "MEXICAN",
+    "price": "4.50",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "mx-quesadilla-cheese",
+    "name": "Cheese Quesadilla",
+    "category": "MEXICAN",
+    "price": "9.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "mx-quesadilla-blt",
+    "name": "BLT Quesadilla",
+    "category": "MEXICAN",
+    "price": "10.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "mx-quesadilla-build",
+    "name": "Build Your Own Quesadilla",
+    "category": "MEXICAN",
+    "price": "11.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sd-caesar",
+    "name": "Caesar Salad (No chicken)",
+    "category": "SALADS",
+    "price": "8.50",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sd-chef",
+    "name": "Chef Salad",
+    "category": "SALADS",
+    "price": "11.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sd-cobb",
+    "name": "Cobb Salad",
+    "category": "SALADS",
+    "price": "11.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sd-mediterranean",
+    "name": "Mediterranean Salad",
+    "category": "SALADS",
+    "price": "11.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sw-blt",
+    "name": "BLT Sandwich",
+    "category": "SANDWICHES",
+    "price": "8.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sw-grilled-cheese",
+    "name": "Grilled Cheese Sandwich",
+    "category": "SANDWICHES",
+    "price": "7.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sw-grilled-cheese-deluxe",
+    "name": "Grilled Cheese Deluxe",
+    "category": "SANDWICHES",
+    "price": "8.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sw-grilled-chicken",
+    "name": "Grilled Chicken Sandwich",
+    "category": "SANDWICHES",
+    "price": "10.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "sw-haystack",
+    "name": "Haystack Sandwich",
+    "category": "SANDWICHES",
+    "price": "10.99",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-colombiana",
+    "name": "Colombiana",
+    "category": "BEVERAGES",
+    "price": "3.50",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-manzana-postobon",
+    "name": "Manzana Postobón",
+    "category": "BEVERAGES",
+    "price": "3.50",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-coca-cola",
+    "name": "Coca-Cola",
+    "category": "BEVERAGES",
+    "price": "3.80",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-7up",
+    "name": "7UP",
+    "category": "BEVERAGES",
+    "price": "3.70",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-hit-lulo",
+    "name": "Jugo Hit Lulo",
+    "category": "BEVERAGES",
+    "price": "4.00",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-hit-mango",
+    "name": "Jugo Hit Mango",
+    "category": "BEVERAGES",
+    "price": "4.00",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-hindu-te-limon",
+    "name": "Té Hindú Limón",
+    "category": "BEVERAGES",
+    "price": "4.20",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-hindu-te-durazno",
+    "name": "Té Hindú Durazno",
+    "category": "BEVERAGES",
+    "price": "4.20",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-limon-mr-tea",
+    "name": "Mr Tea Limón",
+    "category": "BEVERAGES",
+    "price": "6.00",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-dorada-colombia-club",
+    "name": "Club Colombia Dorada",
+    "category": "BEVERAGES",
+    "price": "5.80",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-heineken",
+    "name": "Heineken",
+    "category": "BEVERAGES",
+    "price": "6.80",
+    "note": "",
+    "quantity": 1
+  },
+  {
+    "id": "Bv-stella-artois",
+    "name": "Stella Artois",
+    "category": "BEVERAGES",
+    "price": "7.80",
+    "note": "",
+    "quantity": 1
+  }
+]

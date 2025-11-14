@@ -1,0 +1,57 @@
+[
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Supreme Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "category": "HAMBURGER",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      "HAMBURGER"
+    ]
+  },
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6275",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "category": "HAMBURGER",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "SALAD",
+      "HAMBURGER"
+    ]
+  }
+]
