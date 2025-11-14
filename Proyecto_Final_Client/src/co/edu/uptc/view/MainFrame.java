@@ -1,5 +1,6 @@
 package co.edu.uptc.view;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -29,7 +30,13 @@ public class MainFrame extends JFrame {
 
     private void initComponents() {
         MainPanel mainPanel = new MainPanel(this);
+        addImageIcon();
         setContentPane(mainPanel);
+    }
+
+    private void addImageIcon(){
+        ImageIcon icon = new ImageIcon("resources/Main_Frame_Images/icon_frame.png");
+        setIconImage(icon.getImage());
     }
 
     public void showPanel(JPanel newPanel) {

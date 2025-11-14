@@ -153,5 +153,22 @@
       "BEVERAGE",
       "SANDWICH"
     ]
+  },
+  {
+    "idOrder": "0f422131-4868-49f4-8438-c63249518687",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Haystack Sandwich|add mayo",
+        "category": "SANDWICH",
+        "price": 10.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "1763147782799",
+    "categoriesInvolved": [
+      "SANDWICH"
+    ]
   }
 ]
