@@ -98,6 +98,7 @@ public class OrdersPanel extends JPanel {
 
     public void refreshOrders() {
         this.orderCards = convertToOrderCards();
+        controllerStation.updateOrderCount(this.orderCards.size());
         showOrders();
     }
 }

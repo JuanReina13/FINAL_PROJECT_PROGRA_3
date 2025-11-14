@@ -1,56 +1,16 @@
 {
-  "table": "Decatur",
+  "table": "Soraca",
   "products": [
     {
-      "name": "Pepperoni Pizza",
-      "category": "PIZZA",
-      "price": 19.99,
-      "quantity": 1,
-      "note": ""
-    },
-    {
-      "name": "Hayloft Burger with Cheese",
-      "category": "BURGER",
-      "price": 10.99,
-      "quantity": 1,
-      "note": ""
-    },
-    {
-      "name": "Chicago Dog",
-      "category": "HOT_DOG",
-      "price": 8.99,
-      "quantity": 1,
-      "note": ""
-    },
-    {
-      "name": "Grilled Cheese Deluxe",
+      "name": "Grilled Cheese Deluxe|Extra Bacon",
       "category": "SANDWICH",
       "price": 8.99,
-      "quantity": 1,
-      "note": ""
-    },
-    {
-      "name": "7UP",
-      "category": "BEVERAGE",
-      "price": 3.7,
-      "quantity": 2,
-      "note": ""
-    },
-    {
-      "name": "Jugo Hit Mango",
-      "category": "BEVERAGE",
-      "price": 4.0,
-      "quantity": 1,
-      "note": ""
+      "quantity": 1
     }
   ],
-  "time": "01:59:23.825777300",
+  "time": "1763137240885",
   "isReady": false,
   "categoriesInvolved": [
-    "PIZZA",
-    "BURGER",
-    "HOT_DOG",
-    "BEVERAGE",
     "SANDWICH"
   ]
 }

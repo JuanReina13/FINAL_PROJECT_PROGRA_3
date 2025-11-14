@@ -112,17 +112,8 @@ public class InfoPanel extends JPanel {
         b2.setBackground(UIStyle.PRIMARY_COLOR);
     }
 
-    public void addOrderCount() {
-        this.orderCount++;
-        revalidate();
-        repaint();
-    }
-
-    public void removeOrderCount() {
-        if (this.orderCount > 0) {
-            this.orderCount--;
-            revalidate();
-            repaint();
-        }
+    public void setOrderCount(int count) {
+        this.orderCount = count;
+        openButton.setText(this.orderCount + "   Ordenes");
     }
 }

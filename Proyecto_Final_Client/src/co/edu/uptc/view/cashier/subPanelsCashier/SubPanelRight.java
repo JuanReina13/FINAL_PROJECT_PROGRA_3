@@ -75,7 +75,7 @@ public class SubPanelRight extends JPanel {
         actionButtonsPanel.addSendListener(e -> {
             ControllerCashier controller = new ControllerCashier();
             Order order = new Order();
-            order.setTime(java.time.LocalTime.now().toString());
+            order.setTime(System.currentTimeMillis() + "");
             order.setTable(commentField.getText());
             List<Product> productList = new ArrayList<>();
             Set<String> categorySet = new HashSet<>();
@@ -84,11 +84,11 @@ public class SubPanelRight extends JPanel {
 
                     Product product = new Product(
                             null,
-                            panel.getProductName(),
+                            panel.getProductName() + "|" + panel.getTextPane().getText(),
                             panel.getCategory(),
                             panel.getUnitPrice(),
-                            panel.getQuantity(),
-                            panel.getTextPane().getText());
+                            panel.getQuantity()
+                            /*panel.getTextPane().getText()*/);
                     productList.add(product);
                     categorySet.add(panel.getCategory());
                 }

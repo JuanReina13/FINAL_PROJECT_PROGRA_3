@@ -18,6 +18,15 @@ public class Product {
         this.note = note;
     }
 
+    public Product(String id, String name, String category, double price, int quantity) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
+        this.quantity = quantity;
+        this.note = note;
+    }
+
+
     public String getId() {
         return id;
     }

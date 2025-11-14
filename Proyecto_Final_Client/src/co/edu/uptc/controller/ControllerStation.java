@@ -58,19 +58,17 @@ public class ControllerStation {
                         String command = input.readUTF();
                         switch (command) {
                             case "NEW_ORDER":
-                                String json = input.readUTF();
-                                Order order = gson.fromJson(json, Order.class);
+                                String orderJson = input.readUTF();
+                                Order order = gson.fromJson(orderJson, Order.class);
                                 orderList.add(order);
                                 SwingUtilities.invokeLater(() -> {
                                     if (viewStation != null) {
-                                        viewStation.getInfoPanel().addOrderCount();
                                         List<String> productStrings = new ArrayList<>();
                                         for (Product p : order.getProducts()) {
                                             productStrings.add(p.getQuantity() + "x " + p.getName());
                                         }
                                         OrderCardPanel card = new OrderCardPanel(order.getIdOrder(), order.getTable(),
                                                 order.getTime(), productStrings, true, this);
-                                        viewStation.getInfoPanel().addOrderCount();
                                         viewStation.getOrdersPanel().addOrderCard(card);
                                     }
                                 });
@@ -80,22 +78,8 @@ public class ControllerStation {
                                 String finishedOrderJson = input.readUTF();
                                 Order finishedOrder = gson.fromJson(finishedOrderJson, Order.class);
                                 orderList.removeIf(o -> o.getIdOrder().equals(finishedOrder.getIdOrder()));
-                                viewStation.getInfoPanel().removeOrderCount();
 
                                 break;
-
-                            // case "ORDERS":
-                            //     String ordersJSon = input.readUTF();
-                            //     Order[] activeOrders = gson.fromJson(ordersJSon, Order[].class);
-                            //     orderList.clear();
-                            //     orderList.addAll(Arrays.asList(activeOrders));
-                            //     System.out.println("Ordenes recibidas: " + orderList.size() + " órdenes");
-                            //     SwingUtilities.invokeLater(() -> {
-                            //         if (viewStation != null) {
-                            //             viewStation.showOrdersPanel();
-                            //         }
-                            //     });
-                            //     break;
 
                             case "ORDERS":
                                 String ordersJSon = input.readUTF();
@@ -217,6 +201,12 @@ public class ControllerStation {
                                 .map(p -> p.getQuantity() + "x " + p.getName())
                                 .collect(Collectors.toList())))
                 .collect(Collectors.toList());
+    }
+
+    public void updateOrderCount(int count) {
+        if (viewStation.getInfoPanel() != null) {
+            viewStation.getInfoPanel().setOrderCount(count);
+        }
     }
 
     public void stop() {
