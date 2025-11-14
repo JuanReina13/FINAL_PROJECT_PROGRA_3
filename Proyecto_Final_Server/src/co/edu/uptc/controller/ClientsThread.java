@@ -37,12 +37,13 @@ public class ClientsThread extends Thread {
                 String command = dataInput.readUTF();
 
                 switch (command) {
-                    case "NEW_ORDER":
+                    case "NEW_ORDER": {
                         String orderJson = dataInput.readUTF();
                         Order order = gson.fromJson(orderJson, Order.class);
-                        restaurantManager.addOrder(order);
 
+                        restaurantManager.addOrder(order); // 🔥 ya se encarga de enviar la orden
                         break;
+                    }
 
                     case "GET_ORDERS":
                         String stationName2 = dataInput.readUTF();
@@ -54,7 +55,7 @@ public class ClientsThread extends Thread {
                         // dataOutput.writeUTF("ORDERS");
                         // dataOutput.writeUTF(ordersJson);
                         break;
- 
+
                     case "GET_HISTORY":
                         String historyJson = restaurantManager.getRecordsJson();
                         dataOutput.writeUTF("HISTORY");
@@ -69,11 +70,27 @@ public class ClientsThread extends Thread {
 
                         break;
 
-                    case "REGISTER_STATION":
+                    case "REGISTER_STATION": {
                         String stationName = dataInput.readUTF();
                         Station station = restaurantManager.findStationByName(stationName);
-                            System.out.println("Estación registrada: " + stationName);
+
+                        if (station == null) {
+                            dataOutput.writeUTF("REGISTER_ERROR");
+                            dataOutput.writeUTF("Station not found: " + stationName);
+                            dataOutput.flush();
+                            break;
+                        }
+
+                        station.setClientOutput(dataOutput);
+
+                        System.out.println("Estación registrada: " + stationName);
+
+                        List<Order> filtered = restaurantManager.getActiveOrdersForStation(station);
+                        dataOutput.writeUTF("ORDERS");
+                        dataOutput.writeUTF(gson.toJson(filtered));
+                        dataOutput.flush();
                         break;
+                    }
 
                     case "EXIT":
                         running = false;

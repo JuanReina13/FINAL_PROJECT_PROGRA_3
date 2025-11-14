@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -46,7 +47,7 @@ public class RestaurantManager {
                 "Pizza",
                 List.of(ProductCategory.PIZZA));
 
-        Station expeditor = new Station("Expeditor", List.of(ProductCategory.values()));
+        Station expeditor = new Station("Expeditor", Arrays.asList(ProductCategory.values()));
 
         stations.add(mainKitchen);
         stations.add(pizzas);
@@ -113,7 +114,8 @@ public class RestaurantManager {
             DataOutputStream output = station.getClientOutput();
             if (output != null) {
                 output.writeUTF("ORDER_FINISHED");
-                output.writeUTF(order.getIdOrder());
+                String orderJson = gson.toJson(order);
+                output.writeUTF(orderJson);
                 output.flush();
             }
         } catch (IOException e) {
