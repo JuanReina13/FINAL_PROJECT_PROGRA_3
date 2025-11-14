@@ -1,17 +1,24 @@
 {
-  "idOrder": "fe20c071-6d45-4552-b2c9-f497abfdc388",
-  "table": "Yo",
+  "idOrder": "9267b48b-76e5-4358-89dd-35cd20c1a3cf",
+  "table": "Los sex",
   "products": [
     {
-      "name": "Grilled Cheese Deluxe|",
-      "category": "SANDWICH",
-      "price": 8.99,
+      "name": "Caesar Salad (No chicken)|",
+      "category": "SALAD",
+      "price": 8.5,
+      "quantity": 1
+    },
+    {
+      "name": "Hawaiian Pizza|add pollo",
+      "category": "PIZZA",
+      "price": 20.99,
       "quantity": 1
     }
   ],
-  "time": "1763146437855",
+  "time": "1763147962098",
   "isReady": false,
   "categoriesInvolved": [
-    "SANDWICH"
+    "SALAD",
+    "PIZZA"
   ]
 }

@@ -39,7 +39,7 @@ public class RestaurantManager {
 
         Station mainKitchen = new Station(
                 "MainKitchen",
-                List.of(ProductCategory.BURGUER, ProductCategory.SANDWICH, ProductCategory.HOT_DOG,
+                List.of(ProductCategory.BURGER, ProductCategory.SANDWICH, ProductCategory.HOT_DOG,
                         ProductCategory.MEXICAN, ProductCategory.SALAD, ProductCategory.BEVERAGE));
 
         Station pizzas = new Station(
