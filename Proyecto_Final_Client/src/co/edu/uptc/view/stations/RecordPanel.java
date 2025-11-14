@@ -2,6 +2,7 @@ package co.edu.uptc.view.stations;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.FlowLayout;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,7 +79,9 @@ public class RecordPanel extends JPanel {
         List<OrderCardPanel> orderCards = new ArrayList<>();
         List<OrderViewData> orders = controllerStation.getOrderHistoryViewData();
 
-        for (OrderViewData data : orders) {
+        for (int i = orders.size() - 1; i >= 0; i--) {
+            OrderViewData data = orders.get(i);
+
             OrderCardPanel card = new OrderCardPanel(
                     data.idOrder(),
                     data.table(),
@@ -86,8 +89,10 @@ public class RecordPanel extends JPanel {
                     data.products(),
                     false,
                     controllerStation);
+
             orderCards.add(card);
         }
+
         return orderCards;
     }
 }

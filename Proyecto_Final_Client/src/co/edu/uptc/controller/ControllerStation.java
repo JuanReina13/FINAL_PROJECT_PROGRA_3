@@ -71,12 +71,7 @@ public class ControllerStation {
                                 String finishedOrderJson = input.readUTF();
                                 System.out.println("FINISHED JSON: " + finishedOrderJson);
                                 Order finishedOrder = gson.fromJson(finishedOrderJson, Order.class);
-
-                                System.out.println("ANTES DE BORRAR: " + orderList.size());
                                 orderList.removeIf(o -> o.getIdOrder().equals(finishedOrder.getIdOrder()));
-                                System.out.println("DESPUÉS DE BORRAR: " + orderList.size());
-                                System.out.println("ORDER LIST CLIENTE:");
-                                orderList.forEach(o -> System.out.println(" - " + o.getIdOrder()));
                                 SwingUtilities.invokeLater(() -> { 
                                     viewStation.getOrdersPanel().refreshOrders();
                                 });
@@ -121,10 +116,8 @@ public class ControllerStation {
                 } catch (Exception e) {
                     System.out.println("Conexión cerrada para " + stationName);
                 }
-            }).start();
-
+            }).start(); 
             requestOrders();
-
         } catch (Exception e) {
             System.out.println("Error al conectar estación: " + e.getMessage());
         }

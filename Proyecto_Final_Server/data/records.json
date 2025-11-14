@@ -1,64 +1,298 @@
 [
-    {
-        "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
-        "table": "Niles",
-        "products": [
-            {
-                "name": "Supreme Pizza",
-                "category": "PIZZA",
-                "price": 15.99,
-                "quantity": 1
-            },
-            {
-                "name": "Cobb Salad",
-                "category": "SALAD",
-                "price": 10.99,
-                "quantity": 1
-            },
-            {
-                "name": "Hayloft Burguer with cheese",
-                "category": "HAMBURGER",
-                "price": 11.49,
-                "quantity": 2
-            }
-        ],
-        "isReady": false,
-        "time": 1762799825231,
-        "categoriesInvolved": [
-            "PIZZA",
-            "SALAD",
-            "HAMBURGER"
-        ]
-    },
-    {
-        "idOrder": "251110-936",
-        "table": "Paw Paw",
-        "products": [
-            {
-                "name": "Pepperoni Pizza",
-                "category": "PIZZA",
-                "price": 15.99,
-                "quantity": 1
-            },
-            {
-                "name": "Caesar Salad",
-                "category": "SALAD",
-                "price": 7.99,
-                "quantity": 1
-            },
-            {
-                "name": "Detroit dog",
-                "category": "HOT_DOG",
-                "price": 8.49,
-                "quantity": 2
-            }
-        ],
-        "isReady": false,
-        "time": 1762800501054,
-        "categoriesInvolved": [
-            "PIZZA",
-            "SALAD",
-            "HOT_DOG"
-        ]
-    }
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Supreme Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      null
+    ]
+  },
+  {
+    "idOrder": "251110-936",
+    "table": "Paw Paw",
+    "products": [
+      {
+        "name": "Pepperoni Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Caesar Salad",
+        "category": "SALAD",
+        "price": 7.99,
+        "quantity": 1
+      },
+      {
+        "name": "Detroit dog",
+        "category": "HOT_DOG",
+        "price": 8.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762800501054",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      "HOT_DOG"
+    ]
+  },
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Supreme Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      null
+    ]
+  },
+  {
+    "idOrder": "f42bbb25-0f78-40a0-9e69-5fe846bf1f20",
+    "table": "",
+    "products": [
+      {
+        "name": "BLT Sandwich|",
+        "category": "SANDWICH",
+        "price": 8.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "1763149113924",
+    "categoriesInvolved": [
+      "SANDWICH"
+    ]
+  },
+  {
+    "idOrder": "7eb39b37-cdf9-4c6a-ab82-1fb697f4e75d",
+    "table": "",
+    "products": [
+      {
+        "name": "BLT Sandwich|",
+        "category": "SANDWICH",
+        "price": 8.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "1763149122165",
+    "categoriesInvolved": [
+      "SANDWICH"
+    ]
+  },
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Supreme Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      null
+    ]
+  },
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Supreme Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      null
+    ]
+  },
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Supreme Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      null
+    ]
+  },
+  {
+    "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
+    "table": "Niles",
+    "products": [
+      {
+        "name": "Supreme Pizza",
+        "category": "PIZZA",
+        "price": 15.99,
+        "quantity": 1
+      },
+      {
+        "name": "Cobb Salad",
+        "category": "SALAD",
+        "price": 10.99,
+        "quantity": 1
+      },
+      {
+        "name": "Hayloft Burguer with cheese",
+        "price": 11.49,
+        "quantity": 2
+      }
+    ],
+    "isReady": false,
+    "time": "1762799825231",
+    "categoriesInvolved": [
+      "PIZZA",
+      "SALAD",
+      null
+    ]
+  },
+  {
+    "idOrder": "557e8ad9-a92a-4954-91d9-2c992b488049",
+    "table": "LIZASEXO",
+    "products": [
+      {
+        "name": "Chicago Dog|extra peppers",
+        "category": "HOT_DOG",
+        "price": 8.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "1763150775096",
+    "categoriesInvolved": [
+      "HOT_DOG"
+    ]
+  },
+  {
+    "idOrder": "dcf18ecf-b7b2-41ce-8713-0e8d1731f7dc",
+    "table": "Onichan daitski",
+    "products": [
+      {
+        "name": "Hawaiian Pizza|sin puta pija",
+        "category": "PIZZA",
+        "price": 20.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "1763150501835",
+    "categoriesInvolved": [
+      "PIZZA"
+    ]
+  },
+  {
+    "idOrder": "a52b11df-5691-48e4-8d64-b00906e7d4bc",
+    "table": "Mi abuela",
+    "products": [
+      {
+        "name": "Grilled Cheese Deluxe|",
+        "category": "SANDWICH",
+        "price": 8.99,
+        "quantity": 1
+      }
+    ],
+    "isReady": false,
+    "time": "1763151730374",
+    "categoriesInvolved": [
+      "SANDWICH"
+    ]
+  }
 ]
