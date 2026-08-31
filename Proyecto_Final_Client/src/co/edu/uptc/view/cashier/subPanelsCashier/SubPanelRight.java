@@ -152,4 +152,6 @@ public class SubPanelRight extends JPanel {
     public String getComment() {
         return commentField.getText();
     }
+
+    
 }

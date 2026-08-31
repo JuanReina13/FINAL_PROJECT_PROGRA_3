@@ -2,7 +2,6 @@ package co.edu.uptc.view.stations;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.FlowLayout;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +23,7 @@ public class RecordPanel extends JPanel {
     private JPanel ordersContainer;
     private JScrollPane scrollPane;
     private List<OrderCardPanel> orderCards;
+
 
     public RecordPanel(ControllerStation controllerStation) {
         orderCards = new ArrayList<>();

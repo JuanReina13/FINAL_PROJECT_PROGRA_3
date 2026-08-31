@@ -3,14 +3,6 @@ package co.edu.uptc.controller;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-
-import com.google.gson.Gson;
-
-import co.edu.uptc.model.Order;
-import co.edu.uptc.view.components.OrderViewData;
-import co.edu.uptc.view.stations.OrdersPanel;
-import co.edu.uptc.view.stations.ViewStation;
-
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,9 +12,17 @@ import java.util.stream.Collectors;
 
 import javax.swing.SwingUtilities;
 
+import com.google.gson.Gson;
+
+import co.edu.uptc.config.AppConfig;
+import co.edu.uptc.model.Order;
+import co.edu.uptc.view.components.OrderViewData;
+import co.edu.uptc.view.stations.OrdersPanel;
+import co.edu.uptc.view.stations.ViewStation;
+
 public class ControllerStation {
-    private final String HOST = "localhost";
-    private final int PORT = 49045;
+    private final String HOST = AppConfig.HOST;
+    private final int PORT = AppConfig.PORT;
     private Socket socket;
     private DataOutputStream output;
     private DataInputStream input;
@@ -72,7 +72,7 @@ public class ControllerStation {
                                 System.out.println("FINISHED JSON: " + finishedOrderJson);
                                 Order finishedOrder = gson.fromJson(finishedOrderJson, Order.class);
                                 orderList.removeIf(o -> o.getIdOrder().equals(finishedOrder.getIdOrder()));
-                                SwingUtilities.invokeLater(() -> { 
+                                SwingUtilities.invokeLater(() -> {
                                     viewStation.getOrdersPanel().refreshOrders();
                                 });
                                 break;
@@ -116,7 +116,7 @@ public class ControllerStation {
                 } catch (Exception e) {
                     System.out.println("Conexión cerrada para " + stationName);
                 }
-            }).start(); 
+            }).start();
             requestOrders();
         } catch (Exception e) {
             System.out.println("Error al conectar estación: " + e.getMessage());
@@ -203,7 +203,13 @@ public class ControllerStation {
     public void stop() {
         try {
             running = false;
-            socket.close();
+            if (output != null) {
+                output.writeUTF("EXIT");
+                output.flush();
+            }
+            if (socket != null && !socket.isClosed()) {
+                socket.close();
+            }
         } catch (Exception ignored) {
         }
     }

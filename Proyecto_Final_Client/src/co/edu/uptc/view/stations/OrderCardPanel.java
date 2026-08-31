@@ -1,21 +1,37 @@
 package co.edu.uptc.view.stations;
 
-import javax.swing.*;
-import javax.swing.border.*;
-
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.GridLayout;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.time.Instant;
 import java.time.LocalTime;
 import java.time.ZoneId;
+import java.util.List;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
 import co.edu.uptc.controller.ControllerStation;
 import co.edu.uptc.view.components.RoundedPanelUI;
 import co.edu.uptc.view.components.ScrollBarUI;
 import co.edu.uptc.view.styleConstans.UIStyle;
-
-import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.util.List;
 
 public class OrderCardPanel extends RoundedPanelUI {
 
@@ -23,7 +39,8 @@ public class OrderCardPanel extends RoundedPanelUI {
     private boolean isActive;
     private String orderId;
 
-    public OrderCardPanel(String orderId, String table, String time, List<String> products, boolean isActive, ControllerStation controllerStation) {
+
+    public OrderCardPanel(String orderId, String table, String time, List<String> products, boolean isActive,ControllerStation controllerStation) {
         super(UIStyle.BACKGROUND, 20);
         this.isActive = isActive;
         this.orderId = orderId;
@@ -42,7 +59,7 @@ public class OrderCardPanel extends RoundedPanelUI {
     }
 
     private void addHeaderPanel(String table, String time) {
-        Color color = UIStyle.getRandomHeaderColor();
+        Color color = getColorForOrder(orderId);
         RoundedPanelUI headerPanel = new RoundedPanelUI(color, 15);
         headerPanel.setBackground(color);
         headerPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -90,7 +107,7 @@ public class OrderCardPanel extends RoundedPanelUI {
 
         JButton btnConfirm = addButton("resources/buttons_Images/Check.png", 55, 55);
         JButton btnCancel = addButton("resources/buttons_Images/Cancel.png", 55, 55);
-    
+
         btnConfirm.addActionListener(e -> {
             System.out.println("Boton Finalizar Clikeado");
             controllerStation.sendFinishOrderById(orderId);
@@ -183,8 +200,6 @@ public class OrderCardPanel extends RoundedPanelUI {
 
             itemsPanel.add(Box.createVerticalStrut(10));
         }
-
-        // Solo el panel de productos tiene scroll si se excede la altura
         int estimatedHeight = products.size() * 40 + 40;
         int maxHeight = 250;
         JScrollPane scrollPane = new JScrollPane(itemsPanel, estimatedHeight > maxHeight
@@ -196,7 +211,6 @@ public class OrderCardPanel extends RoundedPanelUI {
         scrollPane.getViewport().setBackground(Color.WHITE);
         scrollPane.getVerticalScrollBar().setUnitIncrement(14);
         scrollPane.getVerticalScrollBar().setUI(new ScrollBarUI());
-
         add(scrollPane, BorderLayout.CENTER);
     }
 
@@ -204,5 +218,28 @@ public class OrderCardPanel extends RoundedPanelUI {
         Instant instant = Instant.ofEpochMilli(Long.parseLong(timestamp));
         LocalTime time = instant.atZone(ZoneId.systemDefault()).toLocalTime();
         return String.format("%02d:%02d", time.getHour(), time.getMinute());
+    }
+
+    public static Color getColorForOrder(String orderId) {
+        int hash = Math.abs(orderId.hashCode());
+        int r = (hash % 180) + 40;
+        int g = ((hash / 200) % 180) + 40;
+        int b = ((hash / 40000) % 180) + 40;
+        Color c = new Color(r, g, b);
+        if (r > 150 && g < 90 && b < 90) {
+            g += 60;
+            b += 60;
+        }
+        if (g > 150 && r < 90 && b < 90) {
+            r += 60;
+            b += 60;
+        }
+        int brightness = r + g + b;
+        if (brightness < 210) {
+            r = Math.min(r + 60, 255);
+            g = Math.min(g + 60, 255);
+            b = Math.min(b + 60, 255);
+        }
+        return new Color(r, g, b);
     }
 }

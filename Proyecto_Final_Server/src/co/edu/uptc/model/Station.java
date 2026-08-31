@@ -16,6 +16,7 @@ public class Station {
     private DataOutputStream clientOutput;
     private Gson gson = new Gson();
 
+
     public Station(String name, List<ProductCategory> assignedCategories) {
         this.name = name;
         this.assignedCategories = assignedCategories;

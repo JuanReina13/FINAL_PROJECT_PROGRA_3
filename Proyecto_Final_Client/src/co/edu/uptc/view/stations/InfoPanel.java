@@ -25,6 +25,7 @@ public class InfoPanel extends JPanel {
     private JButton recordButton;
     private int orderCount = 0;
 
+
     public InfoPanel(String stationName, ControllerStation controllerStation, ViewStation viewStation) {
         this.stationName = stationName;
         this.controllerStation = controllerStation;
@@ -92,7 +93,7 @@ public class InfoPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setActiveButton(openButton, recordButton);
-                viewStation.setDownPanel(new OrdersPanel(controllerStation));
+                viewStation.setDownPanel(new OrdersPanel(controllerStation, null, null));
             }
         });
     }

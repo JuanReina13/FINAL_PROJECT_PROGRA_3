@@ -19,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 
 import co.edu.uptc.controller.ControllerCashier;
 import co.edu.uptc.controller.ControllerStation;
@@ -33,6 +34,7 @@ public class MainPanel extends JPanel {
     private JButton btnPizza;
     private JButton btnKitchen;
     private JButton btnExpeditor;
+    private ControllerStation controllerStation;
 
 
     public MainPanel(MainFrame mainFrame) {
@@ -44,7 +46,7 @@ public class MainPanel extends JPanel {
         addActionListenersToButtons();
     }
 
-    private JPanel createButtonsPanel(){
+    private JPanel createButtonsPanel() {
         JPanel panel = new JPanel(new GridLayout(1, 4, 20, 10));
         panel.setBackground(new Color(245, 247, 250));
         panel.setBorder(BorderFactory.createEmptyBorder(40, 40, 10, 40));
@@ -67,17 +69,22 @@ public class MainPanel extends JPanel {
         return label;
     }
 
-    private void openCashier() {
-        ViewCashier viewCashier = new ViewCashier(new ControllerCashier());
-        viewCashier.setVisible(true);
-        mainFrame.showPanel(viewCashier);
+    private void openCashier(){
+        new Thread(() -> {
+            ControllerCashier controller = new ControllerCashier();
+
+            SwingUtilities.invokeLater(() -> {
+                ViewCashier view = new ViewCashier(controller, mainFrame,this);
+                mainFrame.showPanel(view);
+            });
+        }).start();
     }
 
     private void openStation(String name) {
-        ControllerStation controller = new ControllerStation(name);
-        controller.start();
-        ViewStation viewStation = new ViewStation(name, controller);
-        controller.setViewStation(viewStation);
+        controllerStation = new ControllerStation(name);
+        controllerStation.start();
+        ViewStation viewStation = new ViewStation(name, controllerStation, mainFrame, this);
+        controllerStation.setViewStation(viewStation);
         viewStation.setVisible(true);
         mainFrame.showPanel(viewStation);
     }
@@ -129,4 +136,11 @@ public class MainPanel extends JPanel {
         return button;
     }
 
+    public ControllerStation getControllerStation() {
+        return controllerStation;
+    }
+
+    public void setControllerStation(ControllerStation controllerStation) {
+        this.controllerStation = controllerStation;
+    }
 }
