@@ -15,7 +15,6 @@ public class Order {
     private String time;
     private List<ProductCategory> categoriesInvolved;
 
-
     public Order(String table, List<Product> products) {
         this.idOrder = UUID.randomUUID().toString();
         this.table = table;

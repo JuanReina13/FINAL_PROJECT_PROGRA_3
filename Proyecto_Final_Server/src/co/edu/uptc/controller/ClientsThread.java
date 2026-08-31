@@ -19,7 +19,6 @@ public class ClientsThread extends Thread {
     private RestaurantManager restaurantManager;
     private Gson gson = new Gson();
 
-
     public ClientsThread(Socket socket, RestaurantManager restaurantManager) {
         this.socket = socket;
         this.restaurantManager = restaurantManager;
@@ -42,7 +41,7 @@ public class ClientsThread extends Thread {
                         String orderJson = dataInput.readUTF();
                         Order order = gson.fromJson(orderJson, Order.class);
 
-                        restaurantManager.addOrder(order);
+                        restaurantManager.addOrder(order); // 🔥 ya se encarga de enviar la orden
                         break;
                     }
 
@@ -52,6 +51,9 @@ public class ClientsThread extends Thread {
                         List<Order> filteredOrders = restaurantManager.getActiveOrdersForStation(requestingStation);
                         dataOutput.writeUTF("ORDERS");
                         dataOutput.writeUTF(gson.toJson(filteredOrders));
+                        // String ordersJson = restaurantManager.getOrdersJson();
+                        // dataOutput.writeUTF("ORDERS");
+                        // dataOutput.writeUTF(ordersJson);
                         break;
 
                     case "GET_HISTORY":
@@ -78,14 +80,18 @@ public class ClientsThread extends Thread {
                             dataOutput.flush();
                             break;
                         }
+
                         station.setClientOutput(dataOutput);
+
                         System.out.println("Estación registrada: " + stationName);
+
                         List<Order> filtered = restaurantManager.getActiveOrdersForStation(station);
                         dataOutput.writeUTF("ORDERS");
                         dataOutput.writeUTF(gson.toJson(filtered));
                         dataOutput.flush();
                         break;
                     }
+
                     case "EXIT":
                         running = false;
                         break;
@@ -94,10 +100,12 @@ public class ClientsThread extends Thread {
                         dataOutput.writeUTF("Comando no reconocido");
                 }
             }
+
             socket.close();
             dataOutput.close();
             dataInput.close();
             System.out.println("Cliente desconectado correctamente: " + socket.getInetAddress());
+
         } catch (Exception e) {
             System.out.println("Error en hilo cliente: " + e.getMessage());
         }

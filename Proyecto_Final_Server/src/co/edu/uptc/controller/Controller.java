@@ -9,10 +9,9 @@ import co.edu.uptc.model.RestaurantManager;
 
 public class Controller {
 
-    private final int PORT  = 12691;
+    private final int PORT  = 49045;
     private ServerSocket serverSocket;
     private RestaurantManager restaurantManager;
-
 
     public Controller() throws IOException {
         restaurantManager = new RestaurantManager();

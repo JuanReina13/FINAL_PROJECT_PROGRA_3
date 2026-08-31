@@ -8,8 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import co.edu.uptc.controller.ControllerStation;
-import co.edu.uptc.view.MainFrame;
-import co.edu.uptc.view.mainPanels.MainPanel;
 import co.edu.uptc.view.styleConstans.UIStyle;
 
 public class ViewStation extends JPanel {
@@ -20,21 +18,20 @@ public class ViewStation extends JPanel {
     private OrdersPanel ordersPanel;
     private JPanel downPanel;
 
-
-    public ViewStation(String stationName, ControllerStation controllerStation, MainFrame mainFrame, MainPanel mainPanel) {
+    public ViewStation(String stationName, ControllerStation controllerStation) {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.stationName = stationName;
         this.controllerStation = controllerStation;
         setBackground(UIStyle.BACKGROUND);
         setSize(800, 600);
-        initComponents(mainFrame, mainPanel);
+        initComponents();
         setVisible(true);
     }
 
-    private void initComponents(MainFrame mainFrame, MainPanel mainPanel) {
+    private void initComponents() {
         infoPanel = new InfoPanel(stationName, controllerStation, this);
         add(infoPanel);
-        ordersPanel = new OrdersPanel(controllerStation, mainFrame, mainPanel);
+        ordersPanel = new OrdersPanel(controllerStation);
         downPanel = ordersPanel;
         add(downPanel);
         SwingUtilities.invokeLater(() -> {

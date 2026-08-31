@@ -1,23 +1,4 @@
 {
-<<<<<<< HEAD
-  "idOrder": "90736f63-fe8c-4ef8-b2f7-d8469cf83f26",
-  "table": "GGs",
-  "products": [
-    {
-      "name": "Caesar Salad (No chicken)|",
-      "category": "SALAD",
-      "price": 8.5,
-      "quantity": 1
-    },
-    {
-      "name": "Chef Salad|",
-      "category": "SALAD",
-      "price": 11.99,
-      "quantity": 1
-    }
-  ],
-  "time": "1788114835768",
-=======
   "idOrder": "0f422131-4868-49f4-8438-c63249518687",
   "table": "Niles",
   "products": [
@@ -29,9 +10,8 @@
     }
   ],
   "time": "1763147782799",
->>>>>>> de0be60915095a10a78983eb6e53cdeb82450f0b
   "isReady": false,
   "categoriesInvolved": [
-    "SALAD"
+    "SANDWICH"
   ]
 }

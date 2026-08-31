@@ -28,7 +28,6 @@ public class RestaurantManager {
     private Queue<Order> orderQueue;
     private Stack<Order> orderStack;
 
-
     public RestaurantManager() {
         this.stations = new ArrayList<>();
         this.orderQueue = new LinkedList<>();

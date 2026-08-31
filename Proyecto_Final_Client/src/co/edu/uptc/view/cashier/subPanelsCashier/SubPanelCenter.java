@@ -1,11 +1,9 @@
 package co.edu.uptc.view.cashier.subPanelsCashier;
 
 import java.awt.CardLayout;
-
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
-import co.edu.uptc.view.MainFrame;
 import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.BeveragesPanel;
 import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.BurguersPanel;
 import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.HotDogsPanel;
@@ -13,7 +11,6 @@ import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.MexicanPanel;
 import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.PizzasPanel;
 import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.SaladsPanel;
 import co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels.SandwichesPanel;
-import co.edu.uptc.view.mainPanels.MainPanel;
 import co.edu.uptc.view.styleConstans.UIStyle;
 
 public class SubPanelCenter extends JPanel{
@@ -29,8 +26,8 @@ public class SubPanelCenter extends JPanel{
     private CardLayout cardLayout;
 
 
-    public SubPanelCenter(SubPanelRight subPanelRight, MainFrame mainFrame, MainPanel mainPanel) {
-        buttonCategoryPanel = new ButtonCategoryPanel(this, mainFrame, mainPanel);
+    public SubPanelCenter(SubPanelRight subPanelRight) {
+        buttonCategoryPanel = new ButtonCategoryPanel(this);
         pizzasPanel = new PizzasPanel(this, subPanelRight);
         burguersPanel = new BurguersPanel(this,subPanelRight);
         hotDogsPanel = new HotDogsPanel(this, subPanelRight);
@@ -42,10 +39,10 @@ public class SubPanelCenter extends JPanel{
         setBackground(UIStyle.BORDER_COLOR);
         setBorder(BorderFactory.createMatteBorder(3, 3, 0, 0, UIStyle.TEXT_DARK));
         setLayout(cardLayout);
-        initComponents(mainFrame);
+        initComponents();
     }
 
-    private void initComponents(MainFrame mainFrame) {
+    private void initComponents() {
         add(buttonCategoryPanel,"buttonCategoryPanel");
         add(pizzasPanel,"pizzasPanel");
         add(burguersPanel,"burguersPanel");

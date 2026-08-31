@@ -1,12 +1,5 @@
 [
   {
-<<<<<<< HEAD
-    "idOrder": "93596348-1ed2-4ec6-8ad6-dbd9f53f0b8e",
-    "table": "Tunja",
-    "products": [
-      {
-        "name": "BBQ Chicken GoudaPizza|Extra cheese\r\nAdd bacon\r\nAdd mushrooms",
-=======
     "idOrder": "b067386f-4dc4-47eb-9e2f-cf90619d6276",
     "table": "Niles",
     "products": [
@@ -80,16 +73,11 @@
     "products": [
       {
         "name": "BBQ Chicken GoudaPizza",
->>>>>>> de0be60915095a10a78983eb6e53cdeb82450f0b
         "category": "PIZZA",
         "price": 21.99,
         "quantity": 1
       },
       {
-<<<<<<< HEAD
-        "name": "Nachos Supreme|No olives",
-        "category": "MEXICAN",
-=======
         "name": "Pepperoni Pizza",
         "category": "PIZZA",
         "price": 19.99,
@@ -107,34 +95,11 @@
     "products": [
       {
         "name": "Nachos Supreme",
->>>>>>> de0be60915095a10a78983eb6e53cdeb82450f0b
         "price": 11.99,
         "quantity": 1
       }
     ],
     "isReady": false,
-<<<<<<< HEAD
-    "time": "1763583477411",
-    "categoriesInvolved": [
-      "PIZZA",
-      "MEXICAN"
-    ]
-  },
-  {
-    "idOrder": "f5032c0e-1a26-45f3-b7db-f22f88eb3761",
-    "table": "Jorge",
-    "products": [
-      {
-        "name": "BLT Sandwich|",
-        "category": "SANDWICH",
-        "price": 8.99,
-        "quantity": 1
-      }
-    ],
-    "isReady": false,
-    "time": "1763590013365",
-    "categoriesInvolved": [
-=======
     "time": "01:51:55.933127600",
     "categoriesInvolved": [
       null
@@ -186,26 +151,10 @@
       null,
       "HOT_DOG",
       "BEVERAGE",
->>>>>>> de0be60915095a10a78983eb6e53cdeb82450f0b
       "SANDWICH"
     ]
   },
   {
-<<<<<<< HEAD
-    "idOrder": "90736f63-fe8c-4ef8-b2f7-d8469cf83f26",
-    "table": "GGs",
-    "products": [
-      {
-        "name": "Caesar Salad (No chicken)|",
-        "category": "SALAD",
-        "price": 8.5,
-        "quantity": 1
-      },
-      {
-        "name": "Chef Salad|",
-        "category": "SALAD",
-        "price": 11.99,
-=======
     "idOrder": "0f422131-4868-49f4-8438-c63249518687",
     "table": "Niles",
     "products": [
@@ -213,20 +162,13 @@
         "name": "Haystack Sandwich|add mayo",
         "category": "SANDWICH",
         "price": 10.99,
->>>>>>> de0be60915095a10a78983eb6e53cdeb82450f0b
         "quantity": 1
       }
     ],
     "isReady": false,
-<<<<<<< HEAD
-    "time": "1788114835768",
-    "categoriesInvolved": [
-      "SALAD"
-=======
     "time": "1763147782799",
     "categoriesInvolved": [
       "SANDWICH"
->>>>>>> de0be60915095a10a78983eb6e53cdeb82450f0b
     ]
   }
 ]

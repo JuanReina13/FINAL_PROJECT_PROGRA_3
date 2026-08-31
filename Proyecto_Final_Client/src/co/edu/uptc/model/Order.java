@@ -61,7 +61,7 @@ public class Order {
     public void setReady(boolean isReady) {
         this.isReady = isReady;
     }
-
+    
     public List<String> getCategoriesInvolved() {
         return categoriesInvolved;
     }

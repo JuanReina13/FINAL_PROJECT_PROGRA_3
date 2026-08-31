@@ -7,15 +7,10 @@ import java.awt.Insets;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
-import co.edu.uptc.view.MainFrame;
 import co.edu.uptc.view.components.RoundedButtonCardLayout;
-import co.edu.uptc.view.components.RoundedButtonReturn;
-import co.edu.uptc.view.mainPanels.MainPanel;
 import co.edu.uptc.view.styleConstans.UIStyle;
 
 public class ButtonCategoryPanel extends JPanel{
-
-    private RoundedButtonReturn btnReturn;
     private RoundedButtonCardLayout btnPizzas;
     private RoundedButtonCardLayout btnBurguers;
     private RoundedButtonCardLayout btnHotDogs;
@@ -25,15 +20,14 @@ public class ButtonCategoryPanel extends JPanel{
     private RoundedButtonCardLayout btnBeverages;
 
 
-    public ButtonCategoryPanel(SubPanelCenter subPanelCenter, MainFrame mainFrame, MainPanel mainPanel) {
+    public ButtonCategoryPanel(SubPanelCenter subPanelCenter) {
         setLayout(new GridBagLayout());
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 5));
-        initComponents(subPanelCenter, mainFrame, mainPanel);
+        initComponents(subPanelCenter);
         setVisible(true);
     }
 
-    private void initComponents(SubPanelCenter subPanelCenter, MainFrame mainFrame, MainPanel mainPanel) {
-        btnReturn = new RoundedButtonReturn("Escoger Estación:", UIStyle.ACTION_CANCEL,  mainFrame, mainPanel);
+    private void initComponents(SubPanelCenter subPanelCenter) {
         btnPizzas = new RoundedButtonCardLayout("PIZZAS", UIStyle.CATEGORY_PIZZA, "pizzasPanel",subPanelCenter);
         btnBurguers = new RoundedButtonCardLayout("HAMBURGUESAS", UIStyle.CATEGORY_BURGUERS,"burguersPanel",subPanelCenter);
         btnHotDogs = new RoundedButtonCardLayout("HOT DOGS", UIStyle.CATEGORY_HOT_DOGS,"hotDogsPanel",subPanelCenter);
@@ -49,26 +43,20 @@ public class ButtonCategoryPanel extends JPanel{
 
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.gridheight = 1;
-        gbc.weighty = 1.0;
-        add(btnReturn, gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 1;
         gbc.gridheight = 2;
         gbc.weighty = 2.0;
         add(btnPizzas, gbc);
 
-        gbc.gridy = 3;
+        gbc.gridy = 2;
         gbc.gridheight = 1;
         gbc.weighty = 1.0;
         add(btnBurguers, gbc);
 
-        gbc.gridy = 4;
+        gbc.gridy = 3;
         gbc.gridheight = 1;
         gbc.weighty = 1.0;
         add(btnHotDogs, gbc);
-        
+
         gbc.gridx = 1;
         gbc.gridheight = 1;
         gbc.weighty = 1.0;

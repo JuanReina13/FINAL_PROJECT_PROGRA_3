@@ -1,5 +1,6 @@
 package co.edu.uptc.view.cashier.subPanelsCashier.categoryPanels;
 
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;

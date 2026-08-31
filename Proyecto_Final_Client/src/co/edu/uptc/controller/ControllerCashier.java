@@ -7,13 +7,12 @@ import java.net.Socket;
 
 import com.google.gson.Gson;
 
-import co.edu.uptc.config.AppConfig;
 import co.edu.uptc.model.Order;
 
 public class ControllerCashier {
 
-    private final String HOST = AppConfig.HOST;
-    private final int PORT = AppConfig.PORT;
+    private static final String HOST = "localhost";
+    private static final int PORT = 49045;
     private DataOutputStream dataOutput;
     private DataInputStream dataInput;
     private Gson gson = new Gson();
